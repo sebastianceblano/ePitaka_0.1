@@ -10,13 +10,14 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class PlusDialog extends DialogFragment {
+public class MinusDialog extends DialogFragment {
 
-    private static final String TAG = "PlusDialog";
+    private static final String TAG = "MinusDialog";
 
     //widgets
     private EditText mInput;
     private TextView mDone;
+    public int differenceGlobal;
 
     //Seeks for the components of the first fragment
 
@@ -24,10 +25,9 @@ public class PlusDialog extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
+        View view = inflater.inflate(R.layout.dialog_minus, container, false);
 
-        View view = inflater.inflate(R.layout.dialog_plus, container, false);
-
-        mDone = view.findViewById(R.id.btnAdd);
+        mDone = view.findViewById(R.id.btnMinus);
         mInput = view.findViewById(R.id.etBalance);
 
         mDone.setOnClickListener(new View.OnClickListener() {
@@ -39,10 +39,11 @@ public class PlusDialog extends DialogFragment {
                 if(!input.equals("")){
                     FirstFragment FF = (FirstFragment) getActivity().getFragmentManager().findFragmentByTag("FirstFragment");
                     //ADDING
-                    int sum = Integer.parseInt(FF.mInputDisplay.getText().toString()) + Integer.parseInt(input);
+                    int difference = Integer.parseInt(FF.mInputDisplay.getText().toString()) - Integer.parseInt(input);
                     //SETTING THE SUM
-                    Log.d(TAG , "Sum: " + sum);
-                    FF.mInputDisplay.setText(String.valueOf(sum)); //Problem
+                    Log.d(TAG , "Difference: " + difference);
+                    FF.mInputDisplay.setText(String.valueOf(difference)); //Problem
+                    differenceGlobal = difference;
                 }
                 getDialog().dismiss();
             }

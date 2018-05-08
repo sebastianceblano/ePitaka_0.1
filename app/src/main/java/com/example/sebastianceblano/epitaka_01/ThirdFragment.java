@@ -10,15 +10,13 @@ import android.view.ViewGroup;
 public class ThirdFragment extends Fragment {
     //Alt + Insert to open the menu
 
-    View myView;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         getActivity().setTitle("Tips");
 
-        myView = inflater.inflate(R.layout.third_layout, container, false); //calls the xml from the layout
-        return myView;
+        View view = inflater.inflate(R.layout.third_layout, container, false); //calls the xml from the layout
+        return view;
     }
 }

@@ -1,15 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"> <!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtBalance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="179dp"
-        android:text="FIRST LAYOUT"
-        android:textSize="30dp" />
+        android:layout_marginTop="121dp"
+        android:text="Balance"
+        android:textColor="#5EB54D"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnBalance"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button"
+        android:text="Change Balance"
+        android:textColor="#FFFFFF" />
+
+    <ImageButton
+        android:id="@+id/btnPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnMinus"
+        android:layout_toStartOf="@+id/btnMinus"
+        android:background="@null"
+        app:srcCompat="@drawable/icon_plus" />
+
+    <ImageButton
+        android:id="@+id/btnMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvChangeBalance"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="164dp"
+        android:background="@null"
+        app:srcCompat="@drawable/icon_minus" />
+
+    <TextView
+        android:id="@+id/tvChangeBalance"
+        android:layout_width="234dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="165dp"
+        android:background="@drawable/border"
+        android:gravity="center_horizontal"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="25dp" />
+
 </RelativeLayout>
+</ScrollView>

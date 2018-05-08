@@ -1,16 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1FEDDA">
+    >
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtBudget"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtBudget1"
+        android:layout_below="@+id/pbBudget"
+        android:text="Transportation"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtBudget1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pbBudget"
+        android:layout_alignStart="@+id/pbBudget"
+        android:layout_marginBottom="-106dp"
+        android:text="Balance"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtBudget2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtBudget1"
+        android:layout_below="@+id/pbBudget2"
+        android:text="Food"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtBudget3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtBudget1"
+        android:layout_below="@+id/pbBudget3"
+        android:text="Utility"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/pbBudget"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="186dp"
-        android:text="SECOND LAYOUT"
-        android:textSize="30dp" />
+        android:progressDrawable="@drawable/custom_progress_bar"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="106dp"
+        android:background="@drawable/border_budget"
+        android:maxHeight="20dip"
+        android:maxWidth="20dip" />
+
+    <ProgressBar
+        android:id="@+id/pbBudget2"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBudget"
+        android:layout_centerHorizontal="true"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/border_budget"
+        android:maxHeight="20dip"
+        android:maxWidth="20dip" />
+
+    <ProgressBar
+        android:id="@+id/pbBudget3"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBudget2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="30dp"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        android:background="@drawable/border_budget"
+        android:maxHeight="20dip"
+        android:maxWidth="20dip" />
+
+    <ProgressBar
+        android:id="@+id/pbBudget4"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBudget3"
+        android:layout_centerHorizontal="true"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/border_budget"
+        android:maxHeight="20dip"
+        android:maxWidth="20dip" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnSetBudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/pbBudget"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="21dp"
+        android:clickable="true"
+        android:scaleType="center"
+        app:backgroundTint="@android:color/transparent"
+        app:srcCompat="@drawable/icon_plus" />
+
 </RelativeLayout>

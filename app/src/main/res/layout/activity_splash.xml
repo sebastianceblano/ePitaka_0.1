@@ -4,12 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#5EB54D"
     tools:context=".SplashActivity">
 
     <ImageView
         android:id="@+id/imageView2"
+        android:layout_width="161dp"
+        android:layout_height="238dp"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/icon_logo_01" />
+
+    <TextView
+        android:id="@+id/txtPS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        app:srcCompat="@drawable/logo" />
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:text="ePitaka"
+        style="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:text="Python Studios" />
 </RelativeLayout>

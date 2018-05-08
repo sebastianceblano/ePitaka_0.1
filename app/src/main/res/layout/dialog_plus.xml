@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
 
         android:layout_centerHorizontal="true"
-        android:text="Change Balance"
+        android:text="Add Balance"
         android:textColor="#5EB54D"
         android:textSize="30dp"
         android:textStyle="bold" />
@@ -30,13 +30,13 @@
         android:inputType="numberDecimal" />
 
     <Button
-        android:id="@+id/btnChange"
+        android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/etBalance"
         android:layout_alignParentTop="true"
         android:layout_marginTop="95dp"
         android:background="@drawable/button"
-        android:text="Change"
+        android:text="ADD"
         android:textColor="#FFFFFF" />
 </RelativeLayout>
